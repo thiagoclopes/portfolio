@@ -97,42 +97,53 @@ const items = [
 
 export default function Home() {
   return (
-    <div className="px-4 md:px-16 h-[calc(100vh-6rem)]">
-      <div className="flex flex-col md:flex-row h-full">
-        
-        <div className="flex flex-col justify-center items-center md:w-1/3">
-          <h2 className="text-2xl md:text-3xl text-white mb-4">
-            Desenvolvedor Web e Mobile
-          </h2>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            Thiago Lopes
-          </h1>
-          <p className="text-lg md:text-xl text-white max-w-[16rem] md:max-w-[24rem]">
-            Desenvolvedor React especializado em aplicações web e mobile. Crio interfaces modernas e responsivas com React.js para web e React Native com Expo Go para mobile, focando em agilidade, usabilidade e entrega rápida de MVPs.
-          </p>
-        </div>
-
-        <div className="flex items-center justify-center md:w-1/3 overflow-hidden">
-          <img
-            src={minhaImagem}
-            className="max-h-full max-w-full object-contain"
-            alt="Thiago Lopes"
-          />
-        </div>
-
-        <div className="flex flex-col items-center justify-center w-1/3 p-4 bg-black/70 overflow-hidden">
-          <h2 className="text-white text-3xl mb-4">Keywords</h2>
-          <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-            {items.map((item, idx) => (
-              <MorphingDialogItem key={idx} {...item} />
-            ))}
-          </div>
+    <>
+      <div className="relative px-4 md:px-16 h-[calc(100vh-6rem)]">
+        <div className="flex flex-col md:flex-row h-full">
           
+          <div className="flex flex-col justify-center items-center md:w-1/3">
+            <h2 className="text-2xl md:text-3xl text-white mb-4">
+              Desenvolvedor Web e Mobile
+            </h2>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+              Thiago Lopes
+            </h1>
+            <p className="text-lg md:text-xl text-white max-w-[16rem] md:max-w-[24rem]">
+              Desenvolvedor React especializado em aplicações web e mobile. Crio interfaces modernas e responsivas com React.js para web e React Native com Expo Go para mobile, focando em agilidade, usabilidade e entrega rápida de MVPs.
+            </p>
+          </div>
+
+          <div className="flex items-center justify-center md:w-1/3 overflow-hidden">
+            <img
+              src={minhaImagem}
+              className="max-h-full max-w-full object-contain"
+              alt="Thiago Lopes"
+            />
+          </div>
+
+          <div className="flex flex-col items-center justify-center w-1/3 p-4 bg-black/70 overflow-hidden">
+            <h2 className="text-white text-3xl mb-4">Keywords</h2>
+            <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+              {items.map((item, idx) => (
+                <MorphingDialogItem key={idx} {...item} />
+              ))}
+            </div>
+            
+          </div>
         </div>
 
-
+        <div className="absolute bottom-4 left-[25%] animate-bounce text-white text-3xl z-50">
+          <span>↓</span>
+        </div>
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce text-white text-3xl z-50">
+          <span>↓</span>
+        </div>
+        <div className="absolute bottom-4 left-[75%] animate-bounce text-white text-3xl z-50">
+          <span>↓</span>
+        </div>
+      
 
       </div>
-    </div>
+    </>
   );
 }
