@@ -52,7 +52,7 @@ export function MorphingDialogItem({
           style={{ borderRadius: '12px' }}
           className='relative h-auto w-[500px] border border-gray-100 bg-white'
         >
-          <div className='h-[90vh]'>
+          <div className='h-[70vh]'>
             <div className='relative p-6'>
               <div className='flex justify-center py-10'>
                 <MorphingDialogImage

@@ -1,4 +1,3 @@
-import minhaImagem from '../assets/image.png';
 import { MorphingDialogItem } from '../components/morphingDialogItem';
 import inovacaoImage from '../assets/inovacao.png'
 import usabilidadeImage from '../assets/usabilidade.png'
@@ -115,7 +114,7 @@ export default function Home() {
 
           <div className="flex items-center justify-center md:w-1/3 overflow-hidden">
             <img
-              src={minhaImagem}
+            src="https://collective-gold-clownfish.myfilebase.com/ipfs/QmUc4qH6wBXTL9d31qZ7TC3FyT9geSJ3sejE6enLt28NDq"
               className="max-h-full max-w-full object-contain"
               alt="Thiago Lopes"
             />
