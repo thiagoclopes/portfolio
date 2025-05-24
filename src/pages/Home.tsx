@@ -134,7 +134,7 @@ export default function Home() {
                 <Github color="white" size={32} />
               </a>
               <a
-                href="www.linkedin.com/in/thiago-c-lopes"
+                href="https:www.linkedin.com/in/thiago-c-lopes"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
