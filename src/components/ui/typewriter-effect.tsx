@@ -48,24 +48,26 @@ export const TypewriterEffect = ({
 		return (
 			<motion.div ref={scope} className="inline">
 				{wordsArray.map((word, idx) => {
-					return (
-						<div key={`word-${idx}`} className="inline-block">
-							{word.text.map((char, index) => (
-								<motion.span
-									initial={{}}
-									key={`char-${index}`}
-									className={cn(
-										`dark:text-white text-black opacity-0 hidden`,
-										word.className
-									)}
-								>
-									{char}
-								</motion.span>
-							))}
-							{" "}
-						</div>
-					);
-				})}
+          return (
+            <span 
+              key={`word-${idx}`} 
+              className="inline-block mr-2"  // margin-right para espaçamento
+            >
+              {word.text.map((char, index) => (
+                <motion.span
+                  initial={{}}
+                  key={`char-${index}`}
+                  className={cn(
+                    `dark:text-white text-black opacity-0 hidden`,
+                    word.className
+                  )}
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </span>
+          );
+        })}
 			</motion.div>
 		);
 	};
@@ -118,23 +120,19 @@ export const TypewriterEffectSmooth = ({
 		return (
 			<div>
 				{wordsArray.map((word, idx) => {
-					return (
-						<div key={`word-${idx}`} className="inline-block">
-							{word.text.map((char, index) => (
-								<span
-									key={`char-${index}`}
-									className={cn(
-										`dark:text-white text-white`,
-										word.className
-									)}
-								>
-									{char}
-								</span>
-							))}
-							{" "}
-						</div>
-					);
-				})}
+          return (
+            <span key={`word-${idx}`} className="inline-block mr-2">
+              {word.text.map((char, index) => (
+                <span
+                  key={`char-${index}`}
+                  className={cn(`dark:text-white text-white`, word.className)}
+                >
+                  {char}
+                </span>
+              ))}
+            </span>
+          );
+        })}
 			</div>
 		);
 	};
