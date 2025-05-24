@@ -14,7 +14,8 @@ export default function App() {
 	}, [])
 
 	return (
-		<div className="flex flex-col min-h-screen w-full bg-black relative">
+		
+		<div className="flex flex-col min-h-screen w-full bg-black relative font-montserrat">
 			{showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
           <div className="bg-white p-6 rounded-xl shadow-lg max-w-md text-center">
@@ -65,15 +66,18 @@ export default function App() {
 
 			<Navbar />
 			<main className="flex-grow relative z-10">
+				
 				<section id="home">
 					<Home />
 				</section>
+
 				<section id="stacks">
 					<Stacks />
 				</section>
 				<section id="projects">
 					<Projects />
 				</section>
+
 			</main>
 			<Footer />
 		</div>

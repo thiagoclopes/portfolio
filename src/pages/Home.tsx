@@ -6,6 +6,8 @@ import conexaoImage from '../assets/conexao.png'
 import eficienciaImage from '../assets/eficiencia.png'
 import colaboracaoImage from '../assets/colaboracao.png'
 import criatividadeImage from '../assets/criatividade.png'
+import { TypewriterEffectSmooth } from '../components/ui/typewriter-effect';
+import { Github, Linkedin } from 'lucide-react';
 
 const items = [
   {
@@ -94,6 +96,16 @@ const items = [
   },
 ]
 
+const words = [
+    {
+      text: "Desenvolvedor",
+    },
+    {
+      text: "FullStack.",
+      className: "text-blue-500",
+    },
+  ];
+
 export default function Home() {
   return (
     <>
@@ -101,15 +113,36 @@ export default function Home() {
         <div className="flex flex-col md:flex-row h-full">
           
           <div className="flex flex-col justify-center items-center md:w-1/3">
-            <h2 className="text-2xl md:text-3xl text-white mb-4">
-              Desenvolvedor Web e Mobile
-            </h2>
+            <p className="text-xs md:text-sm text-gray-300 italic mb-2 text-center max-w-[16rem] md:max-w-[24rem]">
+              Transformando ideias em experiências digitais criativas e funcionais.
+            </p>
+            <TypewriterEffectSmooth words={words}/>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
               Thiago Lopes
             </h1>
-            <p className="text-lg md:text-xl text-white max-w-[16rem] md:max-w-[24rem]">
-              Desenvolvedor React especializado em aplicações web e mobile. Crio interfaces modernas e responsivas com React.js para web e React Native com Expo Go para mobile, focando em agilidade, usabilidade e entrega rápida de MVPs.
+            <p className="text-lg md:text-xl text-white max-w-[16rem] md:max-w-[24rem] text-center">
+              Estudante de C&T na UFRN. Desenvolvo interfaces modernas e funcionais com React e React Native, aliando design, performance e usabilidade.
             </p>
+            <div className="flex flex-row gap-4 mt-4">
+              <a
+                href="https://github.com/seu-usuario"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="p-2 rounded-full hover:bg-white/10 transition"
+              >
+                <Github color="white" size={32} />
+              </a>
+              <a
+                href="https://linkedin.com/in/seu-usuario"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="p-2 rounded-full hover:bg-white/10 transition"
+              >
+                <Linkedin color="white" size={32} />
+              </a>
+            </div>
           </div>
 
           <div className="flex items-center justify-center md:w-1/3 overflow-hidden">

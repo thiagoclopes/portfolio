@@ -3,7 +3,7 @@ export default function Navbar() {
   return (
     <nav className="p-8 shadow-md w-full">
       <div className="flex flex-row justify-between px-16">
-        <p className="text-white">
+        <p className="text-white font-bold text-xl">
           Thiago
         </p>
         <ul className="flex space-x-9 justify-end text-white">
