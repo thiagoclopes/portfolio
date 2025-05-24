@@ -125,7 +125,7 @@ export default function Home() {
             </p>
             <div className="flex flex-row gap-4 mt-4">
               <a
-                href="https://github.com/seu-usuario"
+                href="https://github.com/thiagoclopes"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
@@ -134,7 +134,7 @@ export default function Home() {
                 <Github color="white" size={32} />
               </a>
               <a
-                href="https://linkedin.com/in/seu-usuario"
+                href="www.linkedin.com/in/thiago-c-lopes"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
