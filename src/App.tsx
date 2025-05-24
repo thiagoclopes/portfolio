@@ -5,7 +5,6 @@ import Projects from './pages/Projects'
 import Particles from './animations/Particles'
 import Stacks from './pages/Stacks'
 import { useEffect, useState } from 'react'
-import { Construction } from 'lucide-react'
 
 export default function App() {
 	const [showModal, setShowModal] = useState(false)
