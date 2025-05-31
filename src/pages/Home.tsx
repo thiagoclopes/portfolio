@@ -91,7 +91,6 @@ const items = [
     description: [
       'Uso criatividade para resolver desafios técnicos e estratégicos.',
       'Combinar tecnologia com imaginação é o que me move.',
-      'Criar é conectar o que ninguém havia conectado ainda.',
     ],
   },
 ]
@@ -102,7 +101,7 @@ const words = [
     },
     {
       text: "FullStack.",
-      className: "text-blue-500",
+      className: "text-blue-400",
     },
   ];
 
@@ -131,7 +130,7 @@ export default function Home() {
                 aria-label="GitHub"
                 className="p-2 rounded-full hover:bg-white/10 transition"
               >
-                <Github color="white" size={32} />
+                <Github size={32} className='text-blue-400'/>
               </a>
               <a
                 href="https:www.linkedin.com/in/thiago-c-lopes"
@@ -140,7 +139,7 @@ export default function Home() {
                 aria-label="LinkedIn"
                 className="p-2 rounded-full hover:bg-white/10 transition"
               >
-                <Linkedin color="white" size={32} />
+                <Linkedin className='text-blue-400' size={32} />
               </a>
             </div>
           </div>
@@ -153,8 +152,11 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex flex-col items-center justify-center w-1/3 p-4 bg-black/70 overflow-hidden">
-            <h2 className="text-white text-3xl mb-4">Keywords</h2>
+          <div className="flex flex-col items-center justify-center w-1/3 p-4 overflow-hidden">
+            <div className="flex flex-col items-start">
+              <h2 className="text-white font-semibold text-3xl mb-2">Diferenciais</h2>
+              <div className="w-full h-1 bg-blue-400 rounded-full mb-4"></div>
+            </div>
             <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
               {items.map((item, idx) => (
                 <MorphingDialogItem key={idx} {...item} />
