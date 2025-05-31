@@ -17,9 +17,9 @@ const items = [
     title: 'Inovação com Propósito',
     subtitle: 'Transformando ideias em impacto real',
     description: [
-      'Acredito que desenvolvimento vai além da tecnologia.',
-      'Meu foco é criar soluções e negócios inovadores que gerem valor para pessoas e mercados.',
-      'Inovar não é só fazer diferente, é fazer sentido.',
+      'Busco constantemente novas abordagens e tecnologias para resolver desafios complexos.',
+      'Minha expertise está em transformar problemas em soluções originais, que se destacam e abrem novos caminhos.',
+      'Acredito que inovar é explorar o desconhecido e construir o que ainda não existe.'
     ],
   },
   {
@@ -28,11 +28,7 @@ const items = [
     category: 'Usabilidade',
     title: 'Experiências que Encantam',
     subtitle: 'Design centrado no usuário',
-    description: [
-      'Priorizar o usuário significa criar interfaces simples, intuitivas e acessíveis.',
-      'Cada detalhe importa para garantir uma jornada fluida e agradável.',
-      'Usabilidade é respeito pelo tempo e atenção das pessoas.',
-    ],
+    description: [ 'Priorizo interfaces simples, intuitivas e acessíveis, onde cada detalhe é pensado para uma jornada fluida.', 'Para mim, usabilidade é o respeito pelo tempo e atenção do usuário, entregando experiências memoráveis.' ]
   },
   {
     image: agilidadeImage,
@@ -40,23 +36,19 @@ const items = [
     category: 'Agilidade',
     title: 'Da Ideia ao MVP',
     subtitle: 'Velocidade com propósito',
-    description: [
-      'Transformo conceitos em protótipos e MVPs rapidamente.',
-      'Valido hipóteses com agilidade para aprender e evoluir mais rápido.',
-      'O foco é entregar valor desde o início.',
-    ],
+    description: [ 'Transformo conceitos em protótipos e MVPs com velocidade, validando hipóteses rapidamente.', 'Meu foco é no aprendizado ágil e na entrega de valor desde o primeiro momento, evoluindo de forma contínua.' ]
   },
   {
     image: conexaoImage,
     alt: 'Ícone representando conexão',
-    category: 'Conexão',
-    title: 'Tecnologia + Empreendedorismo',
-    subtitle: 'Impacto sustentável com o Conexão Empreendedora',
+    category: 'Impacto & Comunidade',
+    title: 'Tecnologia com Propósito',
+    subtitle: 'Conectando código a causas significativas',
     description: [
-      'Sou parte do projeto Conexão Empreendedora.',
-      'Unimos inovação, colaboração e impacto social.',
-      'Tecnologia com propósito é nossa missão.',
-    ],
+    'Busco projetos que gerem valor real e positivo para a sociedade.',
+    'Acredito no poder da tecnologia para impulsionar a inovação e o impacto em comunidades, e me engajo ativamente nisso.',
+    'Construo pontes entre a tecnologia e as necessidades do mundo real.'
+  ],
   },
   {
     image: eficienciaImage,
@@ -64,11 +56,7 @@ const items = [
     category: 'Eficiência',
     title: 'Código com Qualidade',
     subtitle: 'Performance e manutenção de ponta a ponta',
-    description: [
-      'Escrevo código limpo, escalável e performático.',
-      'Valorizo boas práticas e automações que evitam retrabalho.',
-      'Eficiência é entregar mais com menos ruído.',
-    ],
+    description: [ 'Escrevo código limpo, escalável e performático, priorizando boas práticas e automações inteligentes.', 'Meu objetivo é entregar soluções eficientes, que otimizam recursos e minimizam retrabalhos, garantindo manutenibilidade e performance.' ]
   },
   {
     image: colaboracaoImage,
@@ -76,11 +64,7 @@ const items = [
     category: 'Colaboração',
     title: 'Construindo Juntos',
     subtitle: 'Resultados que nascem da soma',
-    description: [
-      'Os melhores projetos nascem da troca de ideias e habilidades.',
-      'Valorizo a comunicação clara, escuta ativa e aprendizado mútuo.',
-      'Colaboração é o motor da inovação real.',
-    ],
+    description: [ 'Acredito que os projetos de maior impacto nascem da troca de ideias e da soma de habilidades.', 'Valorizo a comunicação clara, escuta ativa e o aprendizado mútuo, porque a colaboração é o verdadeiro motor da inovação.' ]
   },
   {
     image: criatividadeImage,
@@ -88,10 +72,7 @@ const items = [
     category: 'Criatividade',
     title: 'Soluções Inesperadas',
     subtitle: 'Pensar fora da caixa é meu padrão',
-    description: [
-      'Uso criatividade para resolver desafios técnicos e estratégicos.',
-      'Combinar tecnologia com imaginação é o que me move.',
-    ],
+    description: [ 'Aplico a criatividade para resolver desafios técnicos e estratégicos, buscando sempre abordagens inovadoras.', 'Minha motivação é combinar tecnologia com imaginação para entregar soluções verdadeiramente diferenciadas e eficazes.' ]
   },
 ]
 
