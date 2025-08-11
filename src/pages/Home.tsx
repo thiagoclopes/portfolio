@@ -1,16 +1,16 @@
-import { MorphingDialogItem } from '../components/morphingDialogItem';
-import inovacaoImage from '../assets/inovacao.png'
+/*import inovacaoImage from '../assets/inovacao.png'
 import usabilidadeImage from '../assets/usabilidade.png'
 import agilidadeImage from '../assets/agilidade.png'
 import conexaoImage from '../assets/conexao.png'
 import eficienciaImage from '../assets/eficiencia.png'
 import colaboracaoImage from '../assets/colaboracao.png'
 import criatividadeImage from '../assets/criatividade.png'
+*/
 import { TypewriterEffectSmooth } from '../components/ui/typewriter-effect';
 import { Download, Github, Linkedin } from 'lucide-react';
-import { RainbowButton } from '../components/magicui/rainbow-button';
 import { ShimmerButton } from '../components/magicui/shimmer-button';
 
+/*
 const items = [
   {
     image: inovacaoImage,
@@ -77,7 +77,7 @@ const items = [
     description: [ 'Aplico a criatividade para resolver desafios técnicos e estratégicos, buscando sempre abordagens inovadoras.', 'Minha motivação é combinar tecnologia com imaginação para entregar soluções verdadeiramente diferenciadas e eficazes.' ]
   },
 ]
-
+*/
 const words = [
     {
       text: "Desenvolvedor",
