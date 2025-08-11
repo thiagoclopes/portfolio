@@ -7,7 +7,9 @@ import eficienciaImage from '../assets/eficiencia.png'
 import colaboracaoImage from '../assets/colaboracao.png'
 import criatividadeImage from '../assets/criatividade.png'
 import { TypewriterEffectSmooth } from '../components/ui/typewriter-effect';
-import { Github, Linkedin } from 'lucide-react';
+import { Download, Github, Linkedin } from 'lucide-react';
+import { RainbowButton } from '../components/magicui/rainbow-button';
+import { ShimmerButton } from '../components/magicui/shimmer-button';
 
 const items = [
   {
@@ -92,18 +94,15 @@ export default function Home() {
       <div className="relative px-4 md:px-16 h-[calc(100vh-6rem)]">
         <div className="flex flex-col md:flex-row h-full">
           
-          <div className="flex flex-col justify-center items-center md:w-1/3">
-            <p className="text-xs md:text-sm text-gray-300 italic mb-2 text-center max-w-[16rem] md:max-w-[24rem]">
+          <div className="relative z-20 not-even:flex flex-col pl-10 md:pl-20 lg:pl-28 pt-10 md:pt-20 lg:pt-28">
+            <TypewriterEffectSmooth words={words}/>
+            <p className="text-sm md:text-xl text-gray-300 italic mb-10">
               Transformando ideias em experiências digitais criativas e funcionais.
             </p>
-            <TypewriterEffectSmooth words={words}/>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              Thiago Lopes
-            </h1>
-            <p className="text-lg md:text-xl text-white max-w-[16rem] md:max-w-[24rem] text-center">
+            <p className="text-lg md:text-xl text-white max-w-[16rem] md:max-w-[24rem] text-justify">
               Estudante de C&T na UFRN. Desenvolvo interfaces modernas e funcionais com React e React Native, aliando design, performance e usabilidade.
             </p>
-            <div className="flex flex-row gap-4 mt-4">
+            <div className="flex flex-row gap-4 mt-4 items-center justify-center max-w-[16rem] md:max-w-[24rem]">
               <a
                 href="https://github.com/thiagoclopes"
                 target="_blank"
@@ -123,28 +122,31 @@ export default function Home() {
                 <Linkedin className='text-blue-400' size={32} />
               </a>
             </div>
+            <a
+              href="/Curriculo - Thiago Lopes.pdf"
+              download="Thiago-Lopes-Curriculo.pdf"
+              className="max-w-[16rem] md:max-w-[24rem] block"
+            >
+              <ShimmerButton
+                shimmerColor="#0D20D4"
+                shimmerSize="0.1em"
+                className="w-full mt-8"
+              >
+                <Download size={20} className="mr-2" />
+                Currículo
+              </ShimmerButton>
+            </a>
           </div>
 
-          <div className="flex items-center justify-center md:w-1/3 overflow-hidden">
+          <div className="absolute bottom-0 right-0">
             <img
-            src="https://collective-gold-clownfish.myfilebase.com/ipfs/QmUc4qH6wBXTL9d31qZ7TC3FyT9geSJ3sejE6enLt28NDq"
-              className="max-h-full max-w-full object-contain"
+              src="https://collective-gold-clownfish.myfilebase.com/ipfs/QmPn1N59jTpQbEEANvhbYibzmK4EJkErBuVQVnQcTktNjm"
+              className="object-contain transform -scale-x-100 h-auto w-[10rem] md:w-[20rem] lg:w-[30rem] xl:w-[40rem] 2xl:w-[50rem]"
               alt="Thiago Lopes"
             />
           </div>
 
-          <div className="flex flex-col items-center justify-center w-1/3 p-4 overflow-hidden">
-            <div className="flex flex-col items-start">
-              <h2 className="text-white font-semibold text-3xl mb-2">Diferenciais</h2>
-              <div className="w-full h-1 bg-blue-400 rounded-full mb-4"></div>
-            </div>
-            <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
-              {items.map((item, idx) => (
-                <MorphingDialogItem key={idx} {...item} />
-              ))}
-            </div>
-            
-          </div>
+          
         </div>
 
         <div className="absolute bottom-4 left-[25%] animate-bounce text-white text-3xl z-50">
