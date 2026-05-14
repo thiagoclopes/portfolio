@@ -1,4 +1,4 @@
-import { ArrowUpRight, Github } from 'lucide-react'
+import { ArrowUpRight, Github, MapPin, ShoppingBag, Smartphone } from 'lucide-react'
 import {
   MorphingDialog,
   MorphingDialogTrigger,
@@ -22,20 +22,35 @@ type Project = {
   demo?: string
 }
 
+const featuredProject = {
+  title: 'CampusEats',
+  eyebrow: 'Projeto principal',
+  image: 'https://collective-gold-clownfish.myfilebase.com/ipfs/QmeevejUp6tCCkDtemsPPLxNnRt1gTJPTTaxyAB5if4Mhg',
+  video: '/videos/campuseats-demo.mp4',
+  subtitle: 'Aplicativo mobile para conectar a comunidade da UFRN aos vendedores locais do campus.',
+  description:
+    'O CampusEats organiza a descoberta de banquinhas, cardápios, pedidos e acompanhamento em tempo real em uma experiência pensada para uso rápido dentro da rotina universitária.',
+  highlights: [
+    {
+      icon: <Smartphone size={18} />,
+      title: 'Interface mobile',
+      text: 'Fluxos em React Native com foco em navegação clara, estados de pedido e experiência de compra.',
+    },
+    {
+      icon: <MapPin size={18} />,
+      title: 'Contexto UFRN',
+      text: 'Produto desenhado para um problema real do campus, aproximando alunos e vendedores locais.',
+    },
+    {
+      icon: <ShoppingBag size={18} />,
+      title: 'Jornada completa',
+      text: 'Cardápio, carrinho e acompanhamento do pedido estruturados como uma experiência única.',
+    },
+  ],
+  tags: ['React Native', 'TypeScript', 'UX mobile', 'Produto real'],
+}
+
 const projects: Project[] = [
-  {
-    image: 'https://collective-gold-clownfish.myfilebase.com/ipfs/QmeevejUp6tCCkDtemsPPLxNnRt1gTJPTTaxyAB5if4Mhg',
-    screenshots: [
-      // adicionar link prints
-    ],
-    title: 'CampusEats',
-    subtitle: 'Conectando a comunidade aos vendedores locais da UFRN',
-    description: [
-      'O mapa da alimentação na UFRN. Localize os vendedores e banquinhas do campus, confira os cardápios do dia e faça seu pedido de forma digital.',
-      'O app permite navegar pelo cardápio, adicionar itens ao carrinho e acompanhar o pedido em tempo real.',
-    ],
-    tags: ['React Native', 'TypeScript'],
-  },
   {
     image: 'https://collective-gold-clownfish.myfilebase.com/ipfs/QmbYkvzPVrzPAaLsvq5B2m5vm5iFwJ4FnTRz8pyJbsZAwp',
     screenshots: [
@@ -90,11 +105,86 @@ export default function Projects() {
   return (
     <div className="py-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Featured project */}
+        <div className="mb-20">
+          <div className="mb-8">
+            <p className="text-xs font-semibold tracking-[0.24em] uppercase text-blue-400 mb-3">
+              {featuredProject.eyebrow}
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              {featuredProject.title}
+            </h2>
+            <p className="text-gray-300 max-w-2xl text-base md:text-lg leading-relaxed">
+              {featuredProject.subtitle}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-8 lg:gap-12 items-center">
+            <div className="relative mx-auto w-full max-w-[300px]">
+              <div className="relative rounded-[2rem] border border-white/15 bg-gray-950 p-3 shadow-2xl shadow-blue-950/30">
+                <div className="absolute left-1/2 top-3 z-10 h-4 w-24 -translate-x-1/2 rounded-b-2xl bg-black" />
+                <div className="relative aspect-[1080/2340] overflow-hidden rounded-[1.45rem] bg-black">
+                  {featuredProject.video ? (
+                    <video
+                      className="h-full w-full object-contain"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      poster={featuredProject.image}
+                    >
+                      <source src={featuredProject.video} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <img
+                      src={featuredProject.image}
+                      alt="CampusEats em destaque"
+                      className="h-full w-full object-contain"
+                    />
+                  )}
+                  <div className="absolute inset-0 ring-1 ring-inset ring-white/10 pointer-events-none" />
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-7">
+              <p className="text-gray-300 text-base leading-relaxed max-w-2xl">
+                {featuredProject.description}
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {featuredProject.highlights.map((item) => (
+                  <div
+                    key={item.title}
+                    className="rounded-2xl border border-white/10 bg-white/5 p-5"
+                  >
+                    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                      {item.icon}
+                    </div>
+                    <h3 className="text-white font-semibold mb-2">{item.title}</h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">{item.text}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {featuredProject.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Header */}
         <div className="mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">
-            Meus <span className="text-blue-400">projetos</span>
+            Outros <span className="text-blue-400">projetos</span>
           </h2>
           <p className="text-gray-400">Clique em um projeto para ver os detalhes</p>
         </div>
