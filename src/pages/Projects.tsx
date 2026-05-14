@@ -26,7 +26,7 @@ const featuredProject = {
   title: 'CampusEats',
   eyebrow: 'Projeto principal',
   image: 'https://collective-gold-clownfish.myfilebase.com/ipfs/QmeevejUp6tCCkDtemsPPLxNnRt1gTJPTTaxyAB5if4Mhg',
-  video: '/videos/campuseats-demo.mp4',
+  video: 'https://drive.google.com/uc?export=download&id=1SZ4_0PBnCfnU_k8jTYNQH25BkDTUEmG8',
   subtitle: 'Aplicativo mobile para conectar a comunidade da UFRN aos vendedores locais do campus.',
   description:
     'O CampusEats organiza a descoberta de banquinhas, cardápios, pedidos e acompanhamento em tempo real em uma experiência pensada para uso rápido dentro da rotina universitária.',
