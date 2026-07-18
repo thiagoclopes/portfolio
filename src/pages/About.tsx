@@ -1,70 +1,35 @@
-import { Code2, Layers, Smartphone, GraduationCap } from 'lucide-react'
-
-const highlights = [
-  {
-    icon: <GraduationCap size={24} className="text-blue-400" />,
-    title: 'UFRN',
-    subtitle: 'Formado em C&T',
-  },
-  {
-    icon: <Code2 size={24} className="text-blue-400" />,
-    title: 'React',
-    subtitle: 'Especialidade principal',
-  },
-  {
-    icon: <Smartphone size={24} className="text-blue-400" />,
-    title: 'Mobile',
-    subtitle: 'React Native',
-  },
-  {
-    icon: <Layers size={24} className="text-blue-400" />,
-    title: 'FullStack',
-    subtitle: 'Front + Back end',
-  },
-]
+import { ArrowRight, GraduationCap } from 'lucide-react'
 
 export default function About() {
   return (
-    <div className="py-24 px-4">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
-          Sobre <span className="text-blue-400">mim</span>
-        </h2>
-        <p className="text-gray-400 text-center mb-16 max-w-xl mx-auto">
-          Conheça um pouco mais sobre quem eu sou e o que faço
-        </p>
+    <div className="border-t border-border py-24 sm:py-32">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[minmax(240px,0.4fr)_minmax(0,0.8fr)] lg:px-10">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Trajetória</p>
+          <h2 id="about-title" className="mt-5 text-4xl font-semibold tracking-[-0.04em] text-foreground sm:text-5xl">Da ideia à operação</h2>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-5 text-gray-300 text-base leading-relaxed">
-            <p>
-              Sou formado em Ciência e Tecnologia pela <span className="text-white font-medium">UFRN</span>,
-              apaixonado por criar experiências digitais que combinam design e funcionalidade.
-            </p>
-            <p>
-              Trabalho com <span className="text-white font-medium">React</span> e{' '}
-              <span className="text-white font-medium">React Native</span> para construir
-              interfaces modernas, performáticas e acessíveis — tanto para web quanto para mobile.
-            </p>
-            <p>
-              Estou sempre aprendendo novas tecnologias e buscando formas de entregar
-              soluções mais elegantes e eficientes. Acredito que bom código começa com
-              empatia pelo usuário.
-            </p>
+        <div>
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-surface text-primary">
+            <GraduationCap size={24} aria-hidden="true" />
           </div>
+          <p className="mt-8 text-xl leading-9 text-foreground sm:text-2xl sm:leading-10">
+            Minha formação em Ciência e Tecnologia e minha trajetória em Engenharia da Computação na UFRN construíram a base para transitar entre produto, experiência e arquitetura de software.
+          </p>
+          <p className="mt-6 max-w-3xl text-base leading-8 text-muted">
+            Comecei criando produtos do zero, transformando problemas observados em interfaces, integrações e aplicações publicadas. Hoje também atuo na evolução de sistemas corporativos críticos, onde segurança, rastreabilidade, qualidade e manutenção de longo prazo fazem parte de cada decisão técnica.
+          </p>
 
-          <div className="grid grid-cols-2 gap-4">
-            {highlights.map((item) => (
-              <div
-                key={item.title}
-                className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-3 hover:border-blue-400/40 hover:bg-white/8 transition-all duration-300"
-              >
-                {item.icon}
-                <div>
-                  <div className="text-white font-semibold text-lg">{item.title}</div>
-                  <div className="text-gray-400 text-sm mt-0.5">{item.subtitle}</div>
-                </div>
-              </div>
-            ))}
+          <div className="mt-10 grid gap-4 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
+            <div className="rounded-xl border border-border bg-surface p-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-subtle">Origem</p>
+              <p className="mt-2 font-semibold text-foreground">Produtos do zero</p>
+            </div>
+            <ArrowRight className="hidden text-primary sm:block" size={22} aria-hidden="true" />
+            <div className="rounded-xl border border-border bg-surface p-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-subtle">Evolução</p>
+              <p className="mt-2 font-semibold text-foreground">Sistemas críticos em operação</p>
+            </div>
           </div>
         </div>
       </div>

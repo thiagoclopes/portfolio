@@ -2,30 +2,15 @@ import { Github, Linkedin } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/5 bg-black/50 backdrop-blur-sm py-8 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} Thiago Lopes. Todos os direitos reservados.
-        </p>
-
-        <div className="flex items-center gap-4">
-          <a
-            href="https://github.com/thiagoclopes"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="text-gray-500 hover:text-white transition-colors"
-          >
-            <Github size={18} />
+    <footer className="border-t border-border bg-surface px-5 py-8 sm:px-8 lg:px-10">
+      <div className="mx-auto flex max-w-7xl flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-sm text-subtle">© {new Date().getFullYear()} Thiago Lopes. Engenharia com propósito e impacto.</p>
+        <div className="flex items-center gap-2" aria-label="Redes profissionais">
+          <a href="https://github.com/thiagoclopes" target="_blank" rel="noopener noreferrer" aria-label="Abrir GitHub de Thiago Lopes" className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-muted transition-colors hover:bg-background hover:text-foreground">
+            <Github size={19} aria-hidden="true" />
           </a>
-          <a
-            href="https://www.linkedin.com/in/thiago-c-lopes"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="text-gray-500 hover:text-white transition-colors"
-          >
-            <Linkedin size={18} />
+          <a href="https://www.linkedin.com/in/thiago-c-lopes" target="_blank" rel="noopener noreferrer" aria-label="Abrir LinkedIn de Thiago Lopes" className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-muted transition-colors hover:bg-background hover:text-foreground">
+            <Linkedin size={19} aria-hidden="true" />
           </a>
         </div>
       </div>

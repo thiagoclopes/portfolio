@@ -1,93 +1,103 @@
-import { TypewriterEffectSmooth } from '../components/ui/typewriter-effect'
-import { Download, Github, Linkedin } from 'lucide-react'
-import { ShimmerButton } from '../components/magicui/shimmer-button'
-import photo from '../assets/_NAF1133.jpg'
+import { ArrowDownRight, Download, Github, Linkedin } from 'lucide-react'
+import photo from '../assets/thiago-lopes.webp'
 
-const words = [
-  { text: 'Desenvolvedor' },
-  { text: 'FullStack.', className: 'text-blue-400' },
+const metrics = [
+  { label: 'Apps em Produção', value: 'Play Store & TestFlight', accent: true },
+  { label: 'Sistemas Corporativos', value: 'Arquiteturas Críticas' },
+  { label: 'Stack Principal', value: 'React Native, Angular & Spring' },
 ]
 
 export default function Home() {
   return (
-    <div className="relative min-h-[calc(100vh-4rem)] flex items-center overflow-hidden">
+    <div className="relative isolate min-h-screen overflow-hidden pt-20">
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[42rem] bg-[radial-gradient(circle_at_70%_18%,rgba(37,99,235,0.14),transparent_38%),radial-gradient(circle_at_12%_32%,rgba(74,222,128,0.06),transparent_28%)]"
+        aria-hidden="true"
+      />
 
-      {/* Photo — absolute right, gradient fades grey bg into black */}
-      <div className="absolute top-0 bottom-0 right-0 w-[50%] hidden lg:block pointer-events-none select-none">
-        <img
-          src={photo}
-          className="h-full w-full object-cover object-top"
-          alt="Thiago Lopes"
-        />
-        {/* Fade left edge into black */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent" />
-        {/* Fade bottom into black */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
-      </div>
+      <div className="mx-auto grid min-h-[calc(100vh-5rem)] w-full max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.75fr)] lg:gap-16 lg:px-10 lg:py-20">
+        <div className="order-2 lg:order-1">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-primary sm:text-sm">
+            Engenheiro de Software <span aria-hidden="true">·</span> Full Stack
+          </p>
 
-      {/* Text content */}
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-0">
-        <div className="lg:max-w-[55%]">
+          <h1
+            id="hero-title"
+            className="max-w-4xl text-4xl font-semibold leading-[1.08] tracking-[-0.04em] text-foreground sm:text-5xl lg:text-6xl xl:text-7xl"
+          >
+            Construo produtos digitais e sistemas críticos com foco em{' '}
+            <span className="text-primary">experiência, arquitetura e impacto.</span>
+          </h1>
 
-          {/* Mobile photo */}
-          <div className="lg:hidden flex justify-center mb-8">
-            <div className="relative w-40 h-40 rounded-full overflow-hidden border-2 border-blue-400/30">
-              <img
-                src={photo}
-                className="w-full h-full object-cover object-top"
-                alt="Thiago Lopes"
-              />
-            </div>
+          <p className="mt-7 max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
+            Desenvolvo produtos reais, interfaces acessíveis e plataformas corporativas, conectando decisões de UX a arquiteturas full stack confiáveis.
+          </p>
+
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <a
+              href="#campus-eats"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-primary-hover"
+            >
+              Ver estudo de caso
+              <ArrowDownRight size={18} aria-hidden="true" />
+            </a>
+            <a
+              href="/Curriculo - Thiago Lopes.pdf"
+              download="Thiago-Lopes-Curriculo.pdf"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-border bg-surface px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary/60 hover:bg-surface-elevated"
+            >
+              <Download size={18} aria-hidden="true" />
+              Baixar currículo
+            </a>
           </div>
 
-          <TypewriterEffectSmooth words={words} />
-
-          <p className="text-gray-300 italic mb-6 text-base md:text-lg">
-            Transformando ideias em experiências digitais criativas e funcionais.
-          </p>
-
-          <p className="text-gray-200 max-w-md text-base leading-relaxed mb-8">
-            Formado em C&T pela UFRN. Desenvolvo interfaces modernas e funcionais
-            com React e React Native, aliando design, performance e usabilidade.
-          </p>
-
-          <div className="flex flex-row gap-3 mb-8">
+          <div className="mt-7 flex items-center gap-2" aria-label="Perfis profissionais">
             <a
               href="https://github.com/thiagoclopes"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="p-3 rounded-full border border-white/10 hover:border-blue-400/50 hover:bg-white/5 transition-all duration-200"
+              aria-label="Abrir perfil de Thiago Lopes no GitHub"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-muted transition-colors hover:bg-surface-elevated hover:text-foreground"
             >
-              <Github size={22} className="text-blue-400" />
+              <Github size={21} aria-hidden="true" />
             </a>
             <a
               href="https://www.linkedin.com/in/thiago-c-lopes"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="p-3 rounded-full border border-white/10 hover:border-blue-400/50 hover:bg-white/5 transition-all duration-200"
+              aria-label="Abrir perfil de Thiago Lopes no LinkedIn"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-muted transition-colors hover:bg-surface-elevated hover:text-foreground"
             >
-              <Linkedin size={22} className="text-blue-400" />
+              <Linkedin size={21} aria-hidden="true" />
             </a>
           </div>
 
-          <a
-            href="/Curriculo - Thiago Lopes.pdf"
-            download="Thiago-Lopes-Curriculo.pdf"
-            className="w-fit"
-          >
-            <ShimmerButton shimmerColor="#0D20D4" shimmerSize="0.1em">
-              <Download size={18} className="mr-2" />
-              Currículo
-            </ShimmerButton>
-          </a>
+          <dl className="mt-12 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-3">
+            {metrics.map((metric) => (
+              <div key={metric.value} className="flex flex-col justify-center bg-surface px-4 py-3 sm:px-6 sm:py-3.5">
+                <dt className="text-xs font-medium text-muted">{metric.label}</dt>
+                <dd className={`mt-0.5 text-sm font-semibold sm:text-base ${metric.accent ? 'text-impact' : 'text-foreground'}`}>
+                  {metric.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white/40">
-        <span className="text-2xl">↓</span>
+        <div className="order-1 mx-auto w-full max-w-[280px] lg:order-2 lg:max-w-[420px]">
+          <div className="relative aspect-[2/3] overflow-hidden rounded-2xl border border-border bg-surface shadow-2xl shadow-black/40">
+            <img
+              src={photo}
+              width="800"
+              height="1200"
+              alt="Retrato de Thiago Lopes"
+              fetchPriority="high"
+              decoding="async"
+              className="h-full w-full object-cover object-top grayscale-[12%]"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/45 via-transparent to-transparent" aria-hidden="true" />
+          </div>
+        </div>
       </div>
     </div>
   )

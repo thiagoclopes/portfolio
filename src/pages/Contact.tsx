@@ -1,56 +1,43 @@
-import { Github, Linkedin, Mail } from 'lucide-react'
-
-const contacts = [
-  {
-    icon: <Github size={22} />,
-    label: 'GitHub',
-    value: '@thiagoclopes',
-    href: 'https://github.com/thiagoclopes',
-  },
-  {
-    icon: <Linkedin size={22} />,
-    label: 'LinkedIn',
-    value: 'thiago-c-lopes',
-    href: 'https://www.linkedin.com/in/thiago-c-lopes',
-  },
-  {
-    icon: <Mail size={22} />,
-    label: 'Email',
-    value: 'thiagoviniciusc33@gmail.com',
-    href: 'mailto:thiagoviniciusc33@gmail.com',
-  },
-]
+import { Download, Linkedin, Mail } from 'lucide-react'
 
 export default function Contact() {
   return (
-    <div className="py-24 px-4">
-      <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          Vamos <span className="text-blue-400">conversar?</span>
+    <div className="px-5 py-24 sm:px-8 sm:py-32 lg:px-10">
+      <div className="mx-auto max-w-5xl overflow-hidden rounded-3xl border border-primary/25 bg-[radial-gradient(circle_at_top_right,rgba(96,165,250,0.14),transparent_40%),var(--surface)] px-6 py-12 text-center sm:px-12 sm:py-16">
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Próximo desafio</p>
+        <h2 id="contact-title" className="mx-auto mt-5 max-w-3xl text-4xl font-semibold tracking-[-0.04em] text-foreground sm:text-5xl">
+          Vamos construir algo relevante juntos?
         </h2>
-        <p className="text-gray-400 mb-14 max-w-lg mx-auto">
-          Estou aberto a oportunidades de trabalho, freelas e colaborações.
-          Entre em contato por qualquer um dos canais abaixo.
-        </p>
+        <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-muted sm:text-lg">Estou aberto a oportunidades em engenharia front-end e full stack, especialmente onde produto, experiência e arquitetura precisam caminhar juntos.</p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          {contacts.map((c) => (
-            <a
-              key={c.label}
-              href={c.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 px-6 py-4 bg-white/5 border border-white/10 rounded-2xl hover:border-blue-400/50 hover:bg-white/10 transition-all duration-300 group text-left"
-            >
-              <span className="text-blue-400 group-hover:scale-110 transition-transform duration-200">
-                {c.icon}
-              </span>
-              <div>
-                <div className="text-xs text-gray-400 font-medium">{c.label}</div>
-                <div className="text-white text-sm font-semibold">{c.value}</div>
-              </div>
-            </a>
-          ))}
+        <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+          <a
+            href="mailto:thiagoviniciusc33@gmail.com"
+            aria-label="Enviar e-mail para Thiago Lopes"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-primary-hover"
+          >
+            <Mail size={18} aria-hidden="true" />
+            Entrar em contato
+          </a>
+          <a
+            href="https://www.linkedin.com/in/thiago-c-lopes"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir perfil de Thiago Lopes no LinkedIn"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-border bg-background px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary/60"
+          >
+            <Linkedin size={18} aria-hidden="true" />
+            LinkedIn
+          </a>
+          <a
+            href="/Curriculo - Thiago Lopes.pdf"
+            download="Thiago-Lopes-Curriculo.pdf"
+            aria-label="Baixar currículo de Thiago Lopes em PDF"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-border bg-background px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary/60"
+          >
+            <Download size={18} aria-hidden="true" />
+            Currículo em PDF
+          </a>
         </div>
       </div>
     </div>
