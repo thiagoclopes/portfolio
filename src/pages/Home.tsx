@@ -25,7 +25,7 @@ export default function Home() {
             id="hero-title"
             className="max-w-4xl text-4xl font-semibold leading-[1.08] tracking-[-0.04em] text-foreground sm:text-5xl lg:text-6xl xl:text-7xl"
           >
-            Construo produtos digitais e sistemas críticos com foco em{' '}
+            Construo produtos digitais com foco em{' '}
             <span className="text-primary">experiência, arquitetura e impacto.</span>
           </h1>
 
