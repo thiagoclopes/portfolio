@@ -6,9 +6,9 @@ export default function Contact() {
       <div className="mx-auto max-w-5xl overflow-hidden rounded-3xl border border-primary/25 bg-[radial-gradient(circle_at_top_right,rgba(96,165,250,0.14),transparent_40%),var(--surface)] px-6 py-12 text-center sm:px-12 sm:py-16">
         <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Próximo desafio</p>
         <h2 id="contact-title" className="mx-auto mt-5 max-w-3xl text-4xl font-semibold tracking-[-0.04em] text-foreground sm:text-5xl">
-          Vamos construir algo relevante juntos?
+          Vamos conversar sobre seus sistemas?
         </h2>
-        <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-muted sm:text-lg">Estou aberto a oportunidades em engenharia front-end e full stack, especialmente onde produto, experiência e arquitetura precisam caminhar juntos.</p>
+        <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-muted sm:text-lg">Estou aberto a oportunidades em análise e desenvolvimento de sistemas, especialmente onde é preciso conectar as áreas de negócio à tecnologia, integrar sistemas e manter soluções corporativas em operação.</p>
 
         <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
           <a

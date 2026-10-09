@@ -1,7 +1,34 @@
-import { BadgeCheck, BellRing, Building2, Rocket, Store, Users } from 'lucide-react'
+import { BadgeCheck, ClipboardList, Database, Rocket, Search, Store } from 'lucide-react'
 
 const productImage = 'https://collective-gold-clownfish.myfilebase.com/ipfs/QmeevejUp6tCCkDtemsPPLxNnRt1gTJPTTaxyAB5if4Mhg'
 const productVideo = 'https://res.cloudinary.com/dfbcnnwle/video/upload/v1778719648/Screen_Recording_20260513_213433_Campus_Eats_ougehf.mp4'
+
+const analysis = [
+  {
+    stage: 'Problema',
+    icon: Search,
+    title: 'Necessidade observada no campus',
+    text: 'Vendedores ambulantes da UFRN sem um canal centralizado para serem encontrados e receberem pedidos da comunidade universitária.',
+  },
+  {
+    stage: 'Requisitos',
+    icon: ClipboardList,
+    title: 'Escopo definido a partir da rotina real',
+    text: 'Catálogo, carrinho, pedidos e acompanhamento em mapa, com a regra de negócio de que a entrega é feita pelo próprio vendedor.',
+  },
+  {
+    stage: 'Dados',
+    icon: Database,
+    title: 'Modelo relacional em PostgreSQL',
+    text: 'Modelagem dos dados de vendedores, produtos e pedidos, expostos por uma API REST em Spring Boot.',
+  },
+  {
+    stage: 'Operação',
+    icon: Rocket,
+    title: 'Publicado e em evolução',
+    text: 'Distribuído pela Play Store e pelo TestFlight, com ciclos contínuos de validação e melhoria do produto.',
+  },
+]
 
 const architecture = [
   {
@@ -23,16 +50,16 @@ const architecture = [
 
 export default function Projects() {
   return (
-    <article className="border-t border-border py-24 sm:py-32" aria-labelledby="campus-eats-title">
+    <article className="py-24 sm:py-32" aria-labelledby="campus-eats-title">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <header className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.45fr)] lg:items-end">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Estudo de caso · Produto em operação</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Projeto próprio · Produto em operação</p>
             <h2 id="campus-eats-title" className="mt-5 max-w-4xl text-4xl font-semibold tracking-[-0.04em] text-foreground sm:text-5xl lg:text-6xl">
               Campus Eats
             </h2>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-muted sm:text-xl">
-              Uma plataforma criada para centralizar vendedores ambulantes, facilitar sua descoberta pela comunidade universitária e fomentar o comércio local na UFRN.
+              Uma plataforma criada para centralizar vendedores ambulantes, facilitar sua descoberta pela comunidade universitária e fomentar o comércio local na UFRN. Participei de todo o ciclo: da identificação do problema à publicação.
             </p>
           </div>
 
@@ -42,7 +69,7 @@ export default function Projects() {
               <dd className="mt-2 text-3xl font-semibold tracking-tight text-foreground">+1.700</dd>
               <dd className="mt-2 text-sm leading-6 text-muted">usuários cadastrados no aplicativo.</dd>
             </dl>
-            
+
             <dl className="rounded-2xl border border-primary/30 bg-primary/5 p-6">
               <dt className="text-sm font-medium text-primary">Alcance Digital</dt>
               <dd className="mt-2 text-3xl font-semibold tracking-tight text-foreground">+145 mil</dd>
@@ -74,7 +101,7 @@ export default function Projects() {
               <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-primary/30 bg-primary/10 text-primary">
                 <Store size={22} aria-hidden="true" />
               </div>
-              <p className="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-primary">Distinção essencial do produto</p>
+              <p className="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-primary">Regra de negócio central</p>
               <h3 id="product-model-title" className="mt-3 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                 Não é um aplicativo de delivery padrão.
               </h3>
@@ -84,26 +111,19 @@ export default function Projects() {
             </div>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border border-border bg-surface p-6">
-                <Building2 className="text-primary" size={22} aria-hidden="true" />
-                <h3 className="mt-5 text-lg font-semibold text-foreground">Contexto local</h3>
-                <p className="mt-2 text-sm leading-6 text-muted">Produto concebido a partir da dinâmica real da UFRN, respeitando a autonomia de quem vende no campus.</p>
-              </div>
-              <div className="rounded-2xl border border-border bg-surface p-6">
-                <Users className="text-impact" size={22} aria-hidden="true" />
-                <h3 className="mt-5 text-lg font-semibold text-foreground">Impacto comunitário</h3>
-                <p className="mt-2 text-sm leading-6 text-muted">Mais visibilidade para vendedores ambulantes e uma experiência centralizada para a comunidade universitária.</p>
-              </div>
-              <div className="rounded-2xl border border-border bg-surface p-6">
-                <BellRing className="text-primary" size={22} aria-hidden="true" />
-                <h3 className="mt-5 text-lg font-semibold text-foreground">Operação em tempo real</h3>
-                <p className="mt-2 text-sm leading-6 text-muted">Pedidos, mudanças de status e notificações conectam clientes e vendedores durante toda a jornada.</p>
-              </div>
-              <div className="rounded-2xl border border-border bg-surface p-6">
-                <Rocket className="text-impact" size={22} aria-hidden="true" />
-                <h3 className="mt-5 text-lg font-semibold text-foreground">Em operação</h3>
-                <p className="mt-2 text-sm leading-6 text-muted">Distribuído pela Play Store e pelo TestFlight, com ciclos contínuos de validação e evolução do produto.</p>
-              </div>
+              {analysis.map((item) => {
+                const Icon = item.icon
+                return (
+                  <div key={item.title} className="rounded-2xl border border-border bg-surface p-6">
+                    <div className="flex items-center justify-between">
+                      <Icon className="text-primary" size={22} aria-hidden="true" />
+                      <span className="text-xs font-semibold uppercase tracking-[0.16em] text-subtle">{item.stage}</span>
+                    </div>
+                    <h3 className="mt-5 text-lg font-semibold text-foreground">{item.title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-muted">{item.text}</p>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </section>

@@ -3,9 +3,9 @@ import { Menu, X } from 'lucide-react'
 
 const links = [
   { href: '#home', label: 'Início' },
+  { href: '#approach', label: 'Como atuo' },
+  { href: '#enterprise', label: 'Experiência' },
   { href: '#campus-eats', label: 'Campus Eats' },
-  { href: '#enterprise', label: 'Sistemas críticos' },
-  { href: '#skills', label: 'Competências' },
   { href: '#about', label: 'Trajetória' },
   { href: '#contact', label: 'Contato' },
 ]
@@ -41,7 +41,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="inline-flex min-h-11 items-center rounded-lg px-4 text-sm font-medium text-muted transition-colors hover:bg-surface hover:text-foreground"
+                  className="inline-flex min-h-11 items-center rounded-lg px-3 text-sm font-medium text-muted transition-colors hover:bg-surface hover:text-foreground"
                 >
                   {link.label}
                 </a>

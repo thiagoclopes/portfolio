@@ -1,80 +1,120 @@
 import { Bot, FileStack, Network, ShieldCheck } from 'lucide-react'
 
+const responsibilities = [
+  'Levantamento de requisitos e validação das entregas com usuários',
+  'Modelagem de dados e SQL em PostgreSQL; persistência em MongoDB',
+  'Integração entre front-end, APIs REST, microsserviços e mensageria',
+  'Desenvolvimento e manutenção com testes automatizados e Sonar',
+  'Documentação técnica e suporte à implantação com Docker e CI/CD',
+  'Trabalho em equipe guiado pelo framework Scrum',
+]
+
 const cases = [
   {
     number: '01',
     icon: ShieldCheck,
     title: 'Automação Inteligente e Comunicação Multicanal',
-    text: 'Atuação em uma plataforma corporativa composta por front-end Angular, APIs Spring Boot e um serviço especializado de inteligência artificial em FastAPI. A arquitetura integra processamento assíncrono, geração de conteúdo estruturado e comunicação por diferentes canais, mantendo separação clara entre interface, domínio, integrações externas e serviços de IA. O projeto aplica autenticação baseada em tokens, controle de acesso por perfil, route guards, interceptors, auditoria operacional e versionamento de banco de dados. Testes automatizados, containers Docker e pipelines de lint, build e deploy ajudam a sustentar a evolução segura de um sistema com múltiplos fluxos e alto requisito de confiabilidade.',
-    skills: ['Angular', 'Spring Boot', 'FastAPI', 'LLMs', 'PostgreSQL', 'Flyway', 'Segurança', 'Testes', 'CI/CD'],
+    need: 'Gerar conteúdo estruturado e distribuí-lo por diferentes canais de comunicação com rastreabilidade e controle de acesso.',
+    integration: 'Front-end Angular, APIs Spring Boot e serviço de IA em FastAPI, com processamento assíncrono entre as camadas.',
+    data: 'PostgreSQL com schema versionado por Flyway, auditoria operacional e controle de acesso por perfil.',
+    skills: ['Angular', 'Spring Boot', 'FastAPI', 'PostgreSQL', 'Flyway', 'Auditoria', 'CI/CD'],
   },
   {
     number: '02',
     icon: Network,
     title: 'Ecossistema Distribuído de Conhecimento e IA',
-    text: 'Desenvolvimento de um ecossistema modular que combina aplicação web, API corporativa, processamento assíncrono e recuperação semântica de informações. A solução utiliza serviços independentes para persistência vetorial, geração assistida por modelos de linguagem e execução de tarefas agendadas, reduzindo o acoplamento entre a experiência do usuário e operações computacionalmente mais pesadas. Mensageria permite distribuir responsabilidades e processar eventos de forma resiliente, enquanto autenticação, autorização por perfil, guards e interceptors protegem os diferentes contextos da aplicação. A infraestrutura containerizada e os pipelines automatizados padronizam a entrega dos componentes em ambientes distintos.',
-    skills: ['Angular', 'Spring Boot', 'FastAPI', 'LangChain', 'ChromaDB', 'Ollama', 'RabbitMQ', 'PostgreSQL', 'Docker', 'Arquitetura distribuída'],
+    need: 'Recuperar informações por similaridade semântica e executar tarefas agendadas sem impactar a experiência de quem usa a aplicação.',
+    integration: 'Serviços independentes que se comunicam por eventos via RabbitMQ, separando a interface das operações mais pesadas.',
+    data: 'PostgreSQL para dados transacionais e ChromaDB para persistência vetorial, com autorização por perfil.',
+    skills: ['Angular', 'Spring Boot', 'FastAPI', 'RabbitMQ', 'PostgreSQL', 'ChromaDB', 'LangChain', 'Docker'],
   },
   {
     number: '03',
     icon: Bot,
     title: 'Plataforma Modular com Assistência por IA',
-    text: 'Atuação em uma plataforma web corporativa estruturada em módulos independentes, com navegação protegida, controle de acesso por função e integração entre uma interface Angular e serviços especializados de inteligência artificial. A separação entre autenticação, apresentação e processamento de IA permite evoluir cada componente com menor impacto sobre os demais. O front-end adota tipagem estática, componentes reutilizáveis, validação de qualidade com ESLint e testes de guards e fluxos de autenticação. Ambientes containerizados e configurações específicas por contexto reforçam a previsibilidade operacional e facilitam a evolução do produto sem expor detalhes internos ou dados protegidos.',
-    skills: ['Angular', 'TypeScript', 'Tailwind', 'FastAPI', 'Ollama', 'Route guards', 'Testes', 'Docker', 'Separação de responsabilidades'],
+    need: 'Organizar a plataforma em módulos independentes, com acesso definido pela função de cada usuário.',
+    integration: 'Interface Angular integrada a serviços especializados de IA, isolando autenticação, apresentação e processamento.',
+    data: 'Controle de acesso por função com route guards, testes dos fluxos de autenticação e configuração por ambiente.',
+    skills: ['Angular', 'TypeScript', 'FastAPI', 'Ollama', 'Route guards', 'Testes', 'Docker'],
   },
   {
     number: '04',
     icon: FileStack,
     title: 'Fluxos Documentais Assistidos por IA',
-    text: 'Engenharia de uma solução distribuída para fluxos documentais complexos, integrando uma aplicação Angular, uma API Spring Boot e um microsserviço dedicado à assistência por inteligência artificial. A arquitetura separa construção documental, persistência, autenticação e processamento inteligente, permitindo controlar dependências e manter responsabilidades bem definidas. O sistema combina segurança baseada em tokens, guards, interceptors, tratamento centralizado de falhas e comunicação reativa entre serviços. A qualidade é apoiada por testes automatizados, análise estática, linting e pipelines de build de imagens Docker, com versionamento por entrega e configurações específicas para diferentes ambientes.',
-    skills: ['Angular', 'Spring Boot', 'FastAPI', 'LLMs', 'MongoDB', 'WebClient', 'Sonar', 'Segurança', 'CI/CD'],
+    need: 'Apoiar fluxos documentais complexos, da construção do documento à persistência, com assistência por IA.',
+    integration: 'Aplicação Angular, API Spring Boot e microsserviço de IA, com comunicação reativa entre serviços via WebClient.',
+    data: 'Persistência em MongoDB, tratamento centralizado de falhas e qualidade acompanhada por Sonar e pipelines de build.',
+    skills: ['Angular', 'Spring Boot', 'FastAPI', 'MongoDB', 'WebClient', 'Sonar', 'CI/CD'],
   },
 ]
+
+const facets = [
+  { key: 'need', label: 'Necessidade de negócio' },
+  { key: 'integration', label: 'Integração' },
+  { key: 'data', label: 'Dados e governança' },
+] as const
 
 export default function EnterpriseSystems() {
   return (
     <div className="border-y border-border bg-surface py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        <header className="grid gap-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(320px,0.45fr)] lg:items-end">
+        <header className="grid gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(320px,0.55fr)]">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-muted">
-              <ShieldCheck size={15} className="text-primary" aria-hidden="true" />
-              Projetos sob NDA
-            </div>
-            <h2 id="enterprise-title" className="mt-6 max-w-4xl text-4xl font-semibold tracking-[-0.04em] text-foreground sm:text-5xl lg:text-6xl">
-              Engenharia em Sistemas Críticos
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Experiência profissional</p>
+            <h2 id="enterprise-title" className="mt-5 max-w-4xl text-4xl font-semibold tracking-[-0.04em] text-foreground sm:text-5xl lg:text-6xl">
+              Sistemas corporativos da JFRN
             </h2>
+            <p className="mt-6 max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
+              Bolsista de Desenvolvimento de Software da UFRN desde novembro de 2025, em projeto da universidade para a Justiça Federal no Rio Grande do Norte, atuando no desenvolvimento e na manutenção de quatro sistemas corporativos da JFRN em operação.
+            </p>
+            <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium text-muted">
+              <ShieldCheck size={15} className="text-primary" aria-hidden="true" />
+              Projetos sob NDA: descrevo arquitetura e responsabilidades, sem dados internos
+            </div>
           </div>
-          <p className="text-base leading-7 text-muted">Experiência corporativa na JFRN apresentada exclusivamente pelo prisma de arquitetura, qualidade, segurança e integração.</p>
+
+          <div className="rounded-2xl border border-border bg-background p-6 sm:p-7">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-subtle">Responsabilidades no ciclo</h3>
+            <ul className="mt-4 space-y-3">
+              {responsibilities.map((item) => (
+                <li key={item} className="flex gap-3 text-sm leading-6 text-foreground">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden="true" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </header>
 
-        <div className="mt-16 divide-y divide-border border-y border-border">
+        <div className="mt-16 grid gap-4 lg:grid-cols-2">
           {cases.map((item) => {
             const Icon = item.icon
             return (
-              <article key={item.number} className="grid gap-8 py-10 lg:grid-cols-[minmax(0,0.36fr)_minmax(0,0.64fr)] lg:gap-14 lg:py-14">
-                <div className="lg:pr-6">
-                  <div className="flex items-center gap-4">
-                    <span className="w-6 shrink-0 text-center text-xs font-semibold tabular-nums tracking-[0.12em] text-subtle">{item.number}</span>
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-border bg-background text-primary">
-                      <Icon size={21} aria-hidden="true" />
-                    </span>
-                  </div>
-                  <h3 className="mt-6 max-w-md text-2xl font-semibold leading-tight tracking-tight text-foreground">{item.title}</h3>
+              <article key={item.number} className="flex flex-col rounded-2xl border border-border bg-background p-6 sm:p-8">
+                <div className="flex items-center gap-4">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-border bg-surface text-primary">
+                    <Icon size={21} aria-hidden="true" />
+                  </span>
+                  <span className="text-xs font-semibold tabular-nums tracking-[0.16em] text-subtle">Sistema {item.number}</span>
                 </div>
-                <div>
-                  <p className="text-sm leading-7 text-muted sm:text-base sm:leading-8">{item.text}</p>
-                  <div className="mt-7">
-                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-subtle">Competências evidenciadas</p>
-                    <ul className="mt-3 flex flex-wrap gap-2" aria-label={`Competências de ${item.title}`}>
-                      {item.skills.map((skill) => (
-                        <li key={skill} className="rounded-lg border border-border bg-background px-3 py-1.5 text-xs font-medium text-muted">
-                          {skill}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                <h3 className="mt-5 text-xl font-semibold leading-tight tracking-tight text-foreground sm:text-2xl">{item.title}</h3>
+
+                <dl className="mt-6 space-y-4">
+                  {facets.map((facet) => (
+                    <div key={facet.key} className="border-l-2 border-border pl-4">
+                      <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">{facet.label}</dt>
+                      <dd className="mt-1 text-sm leading-6 text-muted">{item[facet.key]}</dd>
+                    </div>
+                  ))}
+                </dl>
+
+                <ul className="mt-auto flex flex-wrap gap-2 pt-7" aria-label={`Tecnologias de ${item.title}`}>
+                  {item.skills.map((skill) => (
+                    <li key={skill} className="rounded-lg border border-border bg-surface px-2.5 py-1 text-xs font-medium text-muted">
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
               </article>
             )
           })}

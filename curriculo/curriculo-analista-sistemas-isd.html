@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Thiago Lopes — Currículo (Analista de Sistemas I)</title>
+<style>
+  @page { size: A4; margin: 10mm 14mm; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 9.3pt;
+    line-height: 1.36;
+    color: #1f2937;
+  }
+  a { color: #1d4ed8; text-decoration: none; }
+  header { border-bottom: 2px solid #1d4ed8; padding-bottom: 7px; }
+  h1 { margin: 0; font-size: 20pt; letter-spacing: 0.04em; color: #0f172a; }
+  .headline { margin: 2px 0 4px; font-size: 10.5pt; font-weight: 600; color: #1d4ed8; }
+  .contact { margin: 0; color: #475569; font-size: 9pt; }
+  h2 {
+    margin: 9px 0 3px;
+    font-size: 9.6pt;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #0f172a;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 2px;
+  }
+  p { margin: 0 0 3px; }
+  ul { margin: 2px 0 0; padding-left: 15px; }
+  li { margin-bottom: 1px; }
+  .row { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+  .role { font-weight: 700; color: #0f172a; }
+  .date { color: #475569; white-space: nowrap; font-size: 9pt; }
+  .sub { color: #475569; font-style: italic; margin-bottom: 2px; }
+  .entry { margin-top: 5px; }
+  .skills p { margin-bottom: 2px; }
+  .skills b, .edu b { color: #0f172a; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>THIAGO LOPES</h1>
+    <p class="headline">Análise e Desenvolvimento de Sistemas | Sistemas Corporativos · SQL · Integração de APIs</p>
+    <p class="contact">
+      Natal/RN · <a href="mailto:thiagoviniciusc33@gmail.com">thiagoviniciusc33@gmail.com</a> · (84) 98633-8368 ·
+      <a href="https://portfolio-rouge-six-81.vercel.app/">Portfólio</a> ·
+      <a href="https://github.com/thiagoclopes">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/thiago-c-lopes">LinkedIn</a>
+    </p>
+  </header>
+
+  <h2>Resumo profissional</h2>
+  <p>
+    Atuo desde novembro de 2025, como bolsista da UFRN, no desenvolvimento e na manutenção de quatro sistemas corporativos
+    em operação da Justiça Federal no Rio Grande do Norte (JFRN), fazendo a ponte entre as necessidades dos usuários e a solução técnica.
+    Participo do ciclo completo: levantamento de requisitos, modelagem de dados SQL (PostgreSQL), integração de sistemas via
+    APIs REST e mensageria, testes, documentação técnica, validação com usuários e suporte à implantação, em equipe guiada
+    pelo framework Scrum. Também conduzi um produto próprio da identificação do problema à operação, com mais de 1.700 usuários.
+  </p>
+
+  <h2>Experiência profissional</h2>
+  <div class="entry">
+    <div class="row">
+      <span class="role">Bolsista de Desenvolvimento de Software | UFRN</span>
+      <span class="date">nov. 2025 – atual</span>
+    </div>
+    <p class="sub">Projeto desenvolvido pela UFRN para a JFRN: análise, desenvolvimento, manutenção e integração de quatro sistemas corporativos da JFRN em operação.</p>
+    <ul>
+      <li><b>Requisitos e usuários:</b> participação no levantamento de requisitos e na validação das entregas com os usuários dos sistemas; suporte à implantação.</li>
+      <li><b>Banco de dados relacional:</b> modelagem de dados e SQL em PostgreSQL, com evolução do schema versionada por migrations (Flyway); persistência em MongoDB.</li>
+      <li><b>Integração de sistemas:</b> APIs REST em Java/Spring Boot, microsserviços em FastAPI, comunicação assíncrona via RabbitMQ e integração de serviços de IA.</li>
+      <li><b>Desenvolvimento e manutenção:</b> interfaces web em Angular, TypeScript, HTML e CSS, com controle de acesso por perfil e auditoria operacional.</li>
+      <li><b>Documentação e qualidade:</b> documentação técnica, testes automatizados, análise estática com Sonar, versionamento com Git, Docker e pipelines de CI/CD.</li>
+      <li><b>Gestão ágil:</b> atuação em equipe guiada pelo framework Scrum.</li>
+    </ul>
+  </div>
+
+  <h2>Projetos relevantes</h2>
+  <div class="entry">
+    <div class="row">
+      <span class="role">Campus Eats — produto próprio em produção</span>
+      <span class="date">React Native · TypeScript · Java · Spring Boot · PostgreSQL</span>
+    </div>
+    <ul>
+      <li>Identificação do problema e definição dos requisitos de uma plataforma para centralizar vendedores ambulantes da UFRN: catálogo, carrinho, pedidos e acompanhamento em mapa, com entregas gerenciadas pelos próprios vendedores.</li>
+      <li>Modelagem do banco de dados relacional em PostgreSQL e desenvolvimento do backend em Spring Boot, com atualizações em tempo real via WebSockets.</li>
+      <li>Ciclo completo até a publicação na Play Store e distribuição via TestFlight; mais de 1.700 usuários cadastrados nos primeiros meses de operação.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <p><span class="role">Robotic Arm Control</span> — coautor de software em Python para controle inteligente de braços robóticos, registrado no INPI (processo BR512025004287-6).</p>
+  </div>
+
+  <h2>Competências técnicas</h2>
+  <div class="skills">
+    <p><b>Análise de sistemas:</b> levantamento de requisitos, validação com usuários, documentação técnica, Scrum.</p>
+    <p><b>Banco de dados:</b> SQL, PostgreSQL (modelagem relacional, migrations com Flyway), MongoDB, ChromaDB.</p>
+    <p><b>Integração de sistemas:</b> APIs REST, Spring Boot, FastAPI, Node.js, RabbitMQ.</p>
+    <p><b>Desenvolvimento web:</b> Java, TypeScript, JavaScript, Angular, React, React Native, HTML5, CSS3.</p>
+    <p><b>Infraestrutura e qualidade:</b> Git, Docker, CI/CD, Sonar, testes automatizados; fundamentos de redes de computadores.</p>
+  </div>
+
+  <h2>Formação acadêmica</h2>
+  <div class="edu">
+    <div class="row"><span><b>Engenharia da Computação</b> | UFRN</span><span class="date">em andamento · previsão jul. 2028</span></div>
+    <div class="row"><span><b>Bacharelado em Ciência e Tecnologia</b> | UFRN</span><span class="date">2022 – 2025</span></div>
+    <div class="row"><span><b>Técnico em Informática</b> | EAJ / UFRN</span><span class="date">2018 – 2020</span></div>
+  </div>
+
+  <h2>Destaques e informações adicionais</h2>
+  <ul>
+    <li>Coautor de artigo científico sobre classificação de imagens com SVM, publicado nos Anais da MNR 2021 (reconhecimento: Mérito Técnico e Acadêmico).</li>
+    <li>Formação complementar em HTTP, Performance Web, React e ecossistema Java.</li>
+    <li>Português nativo; inglês intermediário. Disponibilidade para atuação presencial ou híbrida na região de Natal/RN.</li>
+  </ul>
+</body>
+</html>
